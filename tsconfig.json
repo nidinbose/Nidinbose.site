@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "app/Components/LandingUtilities/Skills.jsx", "app/Components/LandingUtilities/Services.jsx"  ],
+, "app/Components/LandingUtilities/Skills.jsx", "app/Components/LandingUtilities/Services.jsx", "app/page.jsx", "app/Components/Engine/BlurText.jsx", "app/Components/Engine/SplitText.jsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -33,7 +33,7 @@ export default function Services() {
   const directions = ['fade-left', 'fade-right', 'fade-up', 'fade-down'];
 
   return (
-    <div className="min-h-full flex flex-col items-center justify-start pt-16 px-4 md:px-8 lg:px-16">
+    <div className="min-h-full flex flex-col items-center justify-start pt-16 px-4 md:px-8 lg:px-16  container mx-auto">
       {/* Header Text */}
       <h1 data-aos="fade-down" className="text-5xl sm:text-7xl md:text-[80px] lg:text-[120px] xl:text-[150px] font-bold text-black text-center tracking-tight leading-none sea">
         SERVICES
@@ -81,9 +81,8 @@ export default function Services() {
           To Create Impactful Results
         </p>
 
-        {/* Bottom Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
-          {["Imagination", "Creativity", "Designe", "Development"].map((service, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
+          {["Imagination", "Creativity", "Design", "Development"].map((service, index) => (
             <div
               key={index}
               data-aos="fade-left"
@@ -103,6 +102,7 @@ export default function Services() {
           ))}
         </div>
       </div>
+      <div className="text-sm text-black mt-8 animate-bounce sea text-start">Scroll down ↓</div>
     </div>
   );
 }

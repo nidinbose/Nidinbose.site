@@ -5,10 +5,10 @@ import BlurText from "../Engine/BlurText";
 import { RiGeminiFill } from "react-icons/ri";
 
 const arr = [
-  { id: 1, text: "hello" },
-  { id: 2, text: "Clients worldwide" },
-  { id: 3, text: "hello" },
-  { id: 4, text: "hello" },
+  { id: 20, text: "Projects Completed" },
+  { id: 10, text: "Clients worldwide" },
+  { id: 2, text: "Years of Experience" },
+  { id: 2, text: "Awards Achieved" },
 ];
 
 const skill = [
@@ -66,7 +66,7 @@ export default function Skills() {
 
   return (
     <div className="container mx-auto mt-12 mb-12 px-4 sm:px-6 md:px-12 max-w-7xl">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 sea mb-[15vh]">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 sea mb-[15vh] md:px-12 lg:px-5">
         {arr.map((item, index) => (
           <div key={item.id}>
             <div
