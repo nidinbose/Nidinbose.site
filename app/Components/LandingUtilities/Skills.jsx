@@ -82,26 +82,16 @@ export default function Skills() {
         ))}
       </div>
 
-      <SplitText
+      <BlurText
         text="Skillsets"
         className=" text-xl md:text-5xl sea mb-12 text-black text-center md:text-start "
-        delay={150}
-        animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-        animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-        easing="easeOutCubic"
-        threshold={0.2}
-        rootMargin="-50px"
+      delay={150} animateBy="words" direction="top"
       />
 
       <div className="flex items-start justify-end mt-7">
-        <SplitText
+        <BlurText
           text="Proficient in MERN Stack for building full-stack web applications. Skilled in creating responsive ui with react designing restful APIs with express js and managing data using "
-          delay={20}
-          animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-          easing="easeOutCubic"
-          threshold={0.2}
-          rootMargin="-50px"
+         delay={150} animateBy="words" direction="bottom"
           className="text-xs max-w-xl text-start"
         />
       </div>

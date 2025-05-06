@@ -62,15 +62,12 @@ export default function MyWorks() {
             <span className="text-5xl text-[#b5ff6d]">
               <RiGeminiFill />
             </span>
-            <SplitText
+            <BlurText
               text="LATEST PROJECTS"
               className="font-bold text-black sea "
-              delay={150}
-              animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
-              animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
-              easing="easeOutCubic"
-              threshold={0.2}
-              rootMargin="-50px"
+              delay={100}
+              animateBy="words"
+              direction="top"
             />
           </h1>
         </div>
@@ -82,7 +79,7 @@ export default function MyWorks() {
             text="EXPLORE ALL THE PROJECTS TO SEE THE STACK DEPENDANCIES, CODES, GITHUB_LINK, LIVE AND EXPLORE MORE YOU NEED TO SEE "
             delay={100}
             animateBy="words"
-            direction="top"
+            direction="right"
             className="text-xs md:text-base max-w-md text-end mt-5"
           />
         </div>

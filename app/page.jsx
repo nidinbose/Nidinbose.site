@@ -48,20 +48,20 @@ export default function Home() {
           </div>
           <div className="mt-12 text-start">
             <div className="mb-4 sm:mb-6">
-              <SplitText text="A creative" className="text-[2.5rem] sm:text-[4rem] md:text-[5rem] font-light text-black leading-tight " delay={150} animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }} animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }} easing="easeOutCubic" threshold={0.2} rootMargin="-50px" />
+              <BlurText text="A creative" className="text-[2.5rem] sm:text-[4rem] md:text-[5rem] font-light text-black leading-tight py-3" delay={150} animateBy="words" direction="top" />
             </div>
             <div className="mb-4 sm:mb-6">
-              <SplitText text="developer &" className="text-[2.5rem] sm:text-[4rem] md:text-[4rem] font-light text-[#b5ff6d] leading-tight " delay={150} animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }} animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }} easing="easeOutCubic" threshold={0.2} rootMargin="-50px" />
+              <BlurText text="developer &" className="text-[2.5rem] sm:text-[4rem] md:text-[4rem] font-light text-[#b5ff6d] leading-tight py-2" delay={150} animateBy="words" direction="top"/>
             </div>
             <div className='flex items-center justify-start'>
               <div>
-                <SplitText text="digital" className="text-[2.5rem] sm:text-[4rem] md:text-[4rem] font-light text-black leading-tight " delay={150} animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }} animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }} easing="easeOutCubic" threshold={0.2} rootMargin="-50px" />
+                <BlurText text="digital" className="text-[2.5rem] sm:text-[4rem] md:text-[4rem] font-light text-black leading-tight py-2 " delay={150} animateBy="words" direction="top" />
               </div>
               <div>
-                <SplitText text="designer" className="text-[2.5rem] sm:text-[4rem] md:text-[4rem] font-light text-[#b5ff6d] leading-tight " delay={150} animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }} animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }} easing="easeOutCubic" threshold={0.2} rootMargin="-50px" />
+                <BlurText text="designer" className="text-[2.5rem] sm:text-[4rem] md:text-[4rem] font-light text-[#b5ff6d] leading-tight py-2 " delay={150} animateBy="words" direction="top" />
               </div>
             </div>
-            <BlurText text="— It’s NIDINBOSE A MERN STACK DEVELOPER" delay={150} animateBy="words" direction="top" className="text-gray-600 text-sm sm:text-base md:text-lg mt-4" />
+            <BlurText text="— It’s NIDINBOSE A MERN STACK DEVELOPER" delay={150} animateBy="words" direction="top" className="text-gray-600 text-sm sm:text-base md:text-lg pt-4" />
           </div>
           <div>
       <Link href={`/About`}>
