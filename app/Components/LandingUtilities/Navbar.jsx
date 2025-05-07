@@ -100,7 +100,7 @@ export default function Navbar() {
           >
             <Link href="/About" onClick={() => setIsOpen(false)} className="hover:text-[#b5ff6d] leading-relaxed tracking-wide">About</Link>
             <Link href="/Projects" onClick={() => setIsOpen(false)} className="hover:text-[#b5ff6d]">Projects</Link>
-            <Link href="/Service" onClick={() => setIsOpen(false)} className="hover:text-[#b5ff6d]">Services</Link>
+            <Link href="/Serv" onClick={() => setIsOpen(false)} className="hover:text-[#b5ff6d]">Services</Link>
             <Link href="/Contact" onClick={() => setIsOpen(false)} className="hover:text-[#b5ff6d]">Contact</Link>
             <Link
               href="#contact"
