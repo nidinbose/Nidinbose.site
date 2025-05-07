@@ -251,7 +251,7 @@ export default function Serv() {
   </div>
 </motion.div>
       
-      {/* Floating Particles */}
+    
       <div className="absolute inset-0 overflow-hidden pointer-events-none sea">
         {[...Array(30)].map((_, i) => (
           <motion.div
