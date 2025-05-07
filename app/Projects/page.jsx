@@ -2,65 +2,68 @@
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 
 const allProjects = [
   {
     title: 'Hexspin AI',
-    description: 'AI-powered coding practice platform with real-time feedback and personalized learning paths ',
+    description: 'AI-powered coding practice platform with real-time feedback and personalized learning paths',
     image: '/Images/Ai.png',
-    tags: ['Mongodb', 'Sql', 'React', 'Nodejs','Express','Docker','Kubernetis','Aws','Websockets'],
+    tags: ['Mongodb', 'Sql', 'React', 'Nodejs', 'Express', 'Docker', 'Kubernetis', 'Aws', 'Websockets', 'YoutubeApi', 'Tailwind', 'Microservices architecture'],
     accentColor: 'rgba(88, 28, 135, 0.7)',
     category: 'Website Development',
-    year: '2024'
+    year: '2025',
+    Livelink: 'https://www.hexspinai.in',
+    Github: 'https://github.com/yourusername/hexspin-ai'
   },
   {
     title: 'Santics E-Commerce',
-    description: 'Interactive Gaming and Computer accessories redy to use Cpu shopping website ',
-    image: '/manidev.png',
-    tags: ['React', 'Node.js', 'GSAP', 'Tailwind','Express','Mongodb','Framer-motion','AOS','AWS',''],
+    description: 'Interactive Gaming and Computer accessories ready to use Cpu shopping website',
+    image: '/Images/Sant2.png',
+    tags: ['React', 'Node.js', 'GSAP', 'Tailwind', 'Express', 'Mongodb', 'Framer-motion', 'AOS', 'AWS'],
     accentColor: 'rgba(146, 64, 14, 0.7)',
     category: 'Website Development',
-    year: '2023'
+    year: '2023',
+    Livelink: 'https://www.hexspinai.in',
+    Github: ''
   },
   {
-    title: 'NeuroSync AI',
-    description: 'Neural network assistant with voice recognition and predictive analytics',
-    image: '/neurosync.png',
-    tags: ['Python', 'TensorFlow', 'NLP', 'WebSockets'],
-    accentColor: 'rgba(5, 150, 105, 0.7)',
+    title: 'College Management System',
+    description: 'A perfect management of students staff administration data dashboard implemented for easy management marks publishing etc',
+    image: '/Images/CM.png',
+    tags: ['Mongodb', 'Express', 'React', 'Nodejs','javascript','Framer-motion','JWT'],
+    accentColor: 'rgba(108, 244, 201, 0.7)',
     category: 'Website Development',
-    year: '2024'
+    year: '2024',
+    Livelink: 'https://college-management-system-wheat.vercel.app/',
+    Github: ''
   },
   {
-    title: 'Quantum Dashboard',
-    description: 'Data visualization platform with quantum computing simulations',
-    image: '/quantum.png',
-    tags: ['TypeScript', 'D3.js', 'Three.js', 'WebGL'],
+    title: 'Hexspin Company website',
+    description: 'Appoinment booking and company business development website showing services what they can do more ',
+    image: '/Images/HX.png',
+    tags: ['TypeScript', 'Next.js', 'GSAP', 'Vercel','AOS','Spline-3D','Mongodb','Express','Node.js','webSockets','Clean Architucture'],
     accentColor: 'rgba(30, 58, 138, 0.7)',
     category: 'Website Development',
-    year: '2023'
+    year: '2023',
+    Livelink: '',
+    Github: ''
   },
   {
-    title: 'EcoTrack',
-    description: 'Sustainability app with carbon footprint tracking and AI recommendations',
-    image: '/ecotrack.png',
+    title: 'Nidinbose Portfolio',
+    description: 'Personal website showing my profile',
+    image: '/Images/PO.png',
     tags: ['React Native', 'Node.js', 'MongoDB', 'AI'],
     accentColor: 'rgba(20, 83, 45, 0.7)',
-    category: 'Application Development',
-    year: '2024'
-  },
-  {
-    title: 'VR Architect',
-    description: 'Immersive VR platform for architectural visualization and real-time modifications',
-    image: '/vr-arch.png',
-    tags: ['Unity', 'C#', 'Oculus SDK', '3D Modeling'],
-    accentColor: 'rgba(136, 19, 55, 0.7)',
     category: 'Website Development',
-    year: '2023'
+    year: '2024',
+    Livelink: '',
+    Github: ''
   },
+
 ];
 
-const categories = [...new Set(allProjects.map(project => project.category))];
+const categories = ['All', ...new Set(allProjects.map(project => project.category))];
 
 function BubbleBackground() {
   return (
@@ -170,9 +173,9 @@ function ProjectCard({ project, index, onClick }) {
           boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
         }}
       >
-              <div 
+        <div 
           ref={cursorTextRef}
-          className="absolute z-50 pointer-events-none px-3 py-1 animate-bounce text-center rounded-full bg-black text-white text-xs font-medium whitespace-nowrap transition-opacity duration-300 opacity-0 hidden md:block"
+          className="absolute z-50 pointer-events-none px-3 py-1 sea animate-bounce text-center rounded-full bg-black text-white text-xs font-medium whitespace-nowrap transition-opacity duration-300 opacity-0 hidden md:block"
           style={{
             transform: 'translate(-50%, -50%)',
           }}
@@ -236,8 +239,8 @@ function ProjectCard({ project, index, onClick }) {
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
           </div>
           
-                  <div className="md:hidden absolute bottom-4 right-4 z-20">
-            <div className="px-4 py-2 rounded-full bg-black text-white text-sm font-medium flex items-center gap-2">
+          <div className="md:hidden absolute bottom-4 right-4 z-20">
+            <div className="px-4 py-2 rounded-full bg-black text-white text-sm font-medium flex items-center gap-2 sea">
               Tap to View
             </div>
           </div>
@@ -272,7 +275,7 @@ function ProjectModal({ project, onClose }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto sea"
     >
       <div 
         className="absolute inset-0 bg-white/90 backdrop-blur-lg"
@@ -284,7 +287,7 @@ function ProjectModal({ project, onClose }) {
         initial={{ scale: 0.9, y: 50 }}
         animate={{ scale: 1, y: 0 }}
         exit={{ scale: 0.9, y: 50 }}
-        className="relative max-w-6xl w-full rounded-3xl overflow-hidden z-10 my-8 sea"
+        className="relative max-w-6xl w-full rounded-3xl overflow-hidden z-10 my-8"
         style={{
           background: 'rgba(255, 255, 255, 0.95)',
           backdropFilter: 'blur(16px)',
@@ -318,7 +321,7 @@ function ProjectModal({ project, onClose }) {
               src={project.image}
               alt={project.title}
               fill
-              className="object-cover"
+              className="bg-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
               priority
             />
@@ -370,12 +373,28 @@ function ProjectModal({ project, onClose }) {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-black text-white font-bold hover:bg-gray-800 transition-colors">
-                View Live Demo
-              </button>
-              <button className="px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-transparent border border-black/30 text-black hover:bg-black/10 transition-colors">
-                Github
-              </button>
+              {project.Livelink && (
+                <a 
+                  href={project.Livelink.startsWith('http') ? project.Livelink : `https://${project.Livelink}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-black text-white font-bold hover:bg-gray-800 transition-colors">
+                    View Live Demo
+                  </button>
+                </a>
+              )}
+              {project.Github && (
+                <a 
+                  href={project.Github.startsWith('http') ? project.Github : `https://${project.Github}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-transparent border border-black/30 text-black hover:bg-black/10 transition-colors">
+                    Github
+                  </button>
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -400,7 +419,7 @@ export default function ProjectsShowcase() {
   };
 
   return (
-    <div className="min-h-screen bg-white px-4 sm:px-6 py-12 md:py-24 relative">
+    <div className="min-h-full bg-white px-4 sm:px-6 py-12 md:py-24 relative">
       <BubbleBackground />
       
       <div className="max-w-7xl mx-auto relative z-10">
@@ -413,7 +432,7 @@ export default function ProjectsShowcase() {
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4 leading-relaxed tracking-wide sea">
             Project Portfolio
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto tracking-wide leading-relaxed">
             Cutting-edge solutions with immersive interfaces and advanced technologies
           </p>
         </motion.div>
@@ -431,7 +450,7 @@ export default function ProjectsShowcase() {
                 setSelectedCategory(category);
                 setVisibleProjects(4);
               }}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all sea duration-300 ${
                 selectedCategory === category
                   ? 'bg-black text-white'
                   : 'bg-white text-gray-800 hover:bg-gray-100 backdrop-blur-sm border border-gray-200'
